@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spotify_ui/widgets/widgets.dart';
 
-void main() {
+void main() async {
   runApp(MyApp());
 }
 
@@ -43,7 +44,28 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Scaffold(),
+      theme: ThemeData.dark(),
+      home: Shell(),
     );
+  }
+}
+
+class Shell extends StatelessWidget {
+  const Shell({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Expanded(
+        child: Row(
+          children: [SideMenu()],
+        ),
+      ),
+      Container(
+        width: double.infinity,
+        height: 84,
+        color: Colors.blue,
+      )
+    ]);
   }
 }
