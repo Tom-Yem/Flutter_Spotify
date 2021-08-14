@@ -55,17 +55,19 @@ class Shell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Expanded(
-        child: Row(
-          children: [SideMenu()],
+    return Scaffold(
+      body: Column(children: [
+        Expanded(
+          child: Row(
+            children: [SideMenu()],
+          ),
         ),
-      ),
-      Container(
-        width: double.infinity,
-        height: 84,
-        color: Colors.blue,
-      )
-    ]);
+        Container(
+          width: double.infinity,
+          height: 84,
+          color: Colors.blue,
+        )
+      ]),
+    );
   }
 }
