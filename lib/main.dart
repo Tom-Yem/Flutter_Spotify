@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spotify_ui/data/data.dart';
+import 'package:flutter_spotify_ui/screens/playlist_screen.dart';
 import 'package:flutter_spotify_ui/widgets/widgets.dart';
 
 void main() async {
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Spotify UI',
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(
+      theme: ThemeData(
         brightness: Brightness.dark,
         appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
         scaffoldBackgroundColor: const Color(0xFF121212),
@@ -44,7 +46,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      theme: ThemeData.dark(),
       home: Shell(),
     );
   }
@@ -59,7 +60,14 @@ class Shell extends StatelessWidget {
       body: Column(children: [
         Expanded(
           child: Row(
-            children: [SideMenu()],
+            children: [
+              SideMenu(),
+              Expanded(
+                child: PlayListScreen(
+                  playlist: lofihiphopPlaylist,
+                ),
+              )
+            ],
           ),
         ),
         Container(
