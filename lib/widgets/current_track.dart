@@ -16,7 +16,11 @@ class CurrentTrack extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [_TrackInfo(), _PlayerControlls(), _MoreControlls()],
+          children: [
+            _TrackInfo(),
+            _PlayerControlls(),
+            if (MediaQuery.of(context).size.width > 800) _MoreControlls()
+          ],
         ),
       ),
     );
