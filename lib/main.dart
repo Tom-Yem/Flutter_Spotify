@@ -77,11 +77,7 @@ class Shell extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          width: double.infinity,
-          height: 84,
-          color: Colors.blue,
-        )
+        CurrentTrack()
       ]),
     );
   }
