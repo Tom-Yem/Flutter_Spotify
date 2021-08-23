@@ -1,16 +1,9 @@
-# flutter_spotify_ui
+# Spotify_ui
 
-A new Flutter project.
+Spotify's responsive main page ui built with flutter.
 
-## Getting Started
+<br/>
 
-This project is a starting point for a Flutter application.
+![Large screen](./assets/screenshot_web.png)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![smaller screen](./assets/screenshot_mob.png)
